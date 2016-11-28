@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DB7B3983B198B75A58B9D60 /* libPods-XZPictureCycleScrollView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93724C3B9A87134A78861311 /* libPods-XZPictureCycleScrollView.a */; };
+		2E2DEA8B1DE583810006AA72 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2DEA8A1DE583810006AA72 /* main.m */; };
+		2E2DEA8E1DE583810006AA72 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2DEA8D1DE583810006AA72 /* AppDelegate.m */; };
+		2E2DEA941DE583810006AA72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2DEA921DE583810006AA72 /* Main.storyboard */; };
+		2E2DEA961DE583810006AA72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E2DEA951DE583810006AA72 /* Assets.xcassets */; };
+		2E2DEA991DE583810006AA72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2DEA971DE583810006AA72 /* LaunchScreen.storyboard */; };
+		2E2DEAA91DE584380006AA72 /* XZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2DEAA51DE584380006AA72 /* XZViewController.m */; };
+		2E2DEAAC1DE586480006AA72 /* XZRotationPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2DEAAB1DE586480006AA72 /* XZRotationPictureView.m */; };
+		2E2DEAB01DE58A740006AA72 /* XZRotationPictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2DEAAF1DE58A740006AA72 /* XZRotationPictureCell.m */; };
+		2E2DEAB31DE58BB50006AA72 /* UIView+XZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2DEAB21DE58BB50006AA72 /* UIView+XZExtension.m */; };
+		2E2DEABB1DE58F770006AA72 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2E2DEAB51DE58F770006AA72 /* 1.jpg */; };
+		2E2DEABC1DE58F770006AA72 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2E2DEAB61DE58F770006AA72 /* 2.jpg */; };
+		2E2DEABD1DE58F770006AA72 /* 3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2E2DEAB71DE58F770006AA72 /* 3.jpeg */; };
+		2E2DEABE1DE58F770006AA72 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2E2DEAB81DE58F770006AA72 /* 4.jpg */; };
+		2E2DEABF1DE58F770006AA72 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2E2DEAB91DE58F770006AA72 /* 5.jpg */; };
+		2E2DEAC01DE58F770006AA72 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2E2DEABA1DE58F770006AA72 /* 6.jpg */; };
+		2E2DEAC21DE58FA90006AA72 /* InternetImageUrl.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E2DEAC11DE58FA90006AA72 /* InternetImageUrl.plist */; };
+		2E2DEAC41DE59E5B0006AA72 /* placeImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2DEAC31DE59E5B0006AA72 /* placeImage.png */; };
+		2E2DEAC71DE966380006AA72 /* StyledPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2DEAC61DE966380006AA72 /* StyledPageControl.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2E2DEA861DE583810006AA72 /* XZPictureCycleScrollView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XZPictureCycleScrollView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E2DEA8A1DE583810006AA72 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2E2DEA8C1DE583810006AA72 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2E2DEA8D1DE583810006AA72 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2E2DEA931DE583810006AA72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E2DEA951DE583810006AA72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E2DEA981DE583810006AA72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2E2DEA9A1DE583810006AA72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E2DEAA41DE584380006AA72 /* XZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZViewController.h; sourceTree = "<group>"; };
+		2E2DEAA51DE584380006AA72 /* XZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZViewController.m; sourceTree = "<group>"; };
+		2E2DEAAA1DE586480006AA72 /* XZRotationPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZRotationPictureView.h; sourceTree = "<group>"; };
+		2E2DEAAB1DE586480006AA72 /* XZRotationPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZRotationPictureView.m; sourceTree = "<group>"; };
+		2E2DEAAE1DE58A740006AA72 /* XZRotationPictureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZRotationPictureCell.h; sourceTree = "<group>"; };
+		2E2DEAAF1DE58A740006AA72 /* XZRotationPictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZRotationPictureCell.m; sourceTree = "<group>"; };
+		2E2DEAB11DE58BB50006AA72 /* UIView+XZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XZExtension.h"; sourceTree = "<group>"; };
+		2E2DEAB21DE58BB50006AA72 /* UIView+XZExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XZExtension.m"; sourceTree = "<group>"; };
+		2E2DEAB51DE58F770006AA72 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		2E2DEAB61DE58F770006AA72 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		2E2DEAB71DE58F770006AA72 /* 3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpeg; sourceTree = "<group>"; };
+		2E2DEAB81DE58F770006AA72 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		2E2DEAB91DE58F770006AA72 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
+		2E2DEABA1DE58F770006AA72 /* 6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 6.jpg; sourceTree = "<group>"; };
+		2E2DEAC11DE58FA90006AA72 /* InternetImageUrl.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InternetImageUrl.plist; sourceTree = "<group>"; };
+		2E2DEAC31DE59E5B0006AA72 /* placeImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeImage.png; sourceTree = "<group>"; };
+		2E2DEAC51DE966380006AA72 /* StyledPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyledPageControl.h; sourceTree = "<group>"; };
+		2E2DEAC61DE966380006AA72 /* StyledPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyledPageControl.m; sourceTree = "<group>"; };
+		55DBE8B65165CE660F240E18 /* Pods-XZPictureCycleScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZPictureCycleScrollView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XZPictureCycleScrollView/Pods-XZPictureCycleScrollView.debug.xcconfig"; sourceTree = "<group>"; };
+		93724C3B9A87134A78861311 /* libPods-XZPictureCycleScrollView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XZPictureCycleScrollView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADCD54E6316A52872FDADC13 /* Pods-XZPictureCycleScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZPictureCycleScrollView.release.xcconfig"; path = "Pods/Target Support Files/Pods-XZPictureCycleScrollView/Pods-XZPictureCycleScrollView.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E2DEA831DE583810006AA72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DB7B3983B198B75A58B9D60 /* libPods-XZPictureCycleScrollView.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E2DEA7D1DE583810006AA72 = {
+			isa = PBXGroup;
+			children = (
+				2E2DEA881DE583810006AA72 /* XZPictureCycleScrollView */,
+				2E2DEA871DE583810006AA72 /* Products */,
+				3AFB80AEFF6288CEB0E3C574 /* Pods */,
+				7AA9B8769E2C75F96A68772E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2E2DEA871DE583810006AA72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E2DEA861DE583810006AA72 /* XZPictureCycleScrollView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E2DEA881DE583810006AA72 /* XZPictureCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				2E2DEAAD1DE588830006AA72 /* Tools */,
+				2E2DEAA31DE584380006AA72 /* Controller */,
+				2E2DEAA61DE584380006AA72 /* Model */,
+				2E2DEAA71DE584380006AA72 /* Other */,
+				2E2DEAA81DE584380006AA72 /* View */,
+				2E2DEA8C1DE583810006AA72 /* AppDelegate.h */,
+				2E2DEA8D1DE583810006AA72 /* AppDelegate.m */,
+				2E2DEA921DE583810006AA72 /* Main.storyboard */,
+				2E2DEA951DE583810006AA72 /* Assets.xcassets */,
+				2E2DEA971DE583810006AA72 /* LaunchScreen.storyboard */,
+				2E2DEA9A1DE583810006AA72 /* Info.plist */,
+				2E2DEA891DE583810006AA72 /* Supporting Files */,
+			);
+			path = XZPictureCycleScrollView;
+			sourceTree = "<group>";
+		};
+		2E2DEA891DE583810006AA72 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E2DEA8A1DE583810006AA72 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E2DEAA31DE584380006AA72 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2E2DEAA41DE584380006AA72 /* XZViewController.h */,
+				2E2DEAA51DE584380006AA72 /* XZViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2E2DEAA61DE584380006AA72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2E2DEAA71DE584380006AA72 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2E2DEAC31DE59E5B0006AA72 /* placeImage.png */,
+				2E2DEAB41DE58F770006AA72 /* Images */,
+				2E2DEAC11DE58FA90006AA72 /* InternetImageUrl.plist */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		2E2DEAA81DE584380006AA72 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2E2DEAC51DE966380006AA72 /* StyledPageControl.h */,
+				2E2DEAC61DE966380006AA72 /* StyledPageControl.m */,
+				2E2DEAAA1DE586480006AA72 /* XZRotationPictureView.h */,
+				2E2DEAAB1DE586480006AA72 /* XZRotationPictureView.m */,
+				2E2DEAAE1DE58A740006AA72 /* XZRotationPictureCell.h */,
+				2E2DEAAF1DE58A740006AA72 /* XZRotationPictureCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2E2DEAAD1DE588830006AA72 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				2E2DEAB11DE58BB50006AA72 /* UIView+XZExtension.h */,
+				2E2DEAB21DE58BB50006AA72 /* UIView+XZExtension.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		2E2DEAB41DE58F770006AA72 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2E2DEAB51DE58F770006AA72 /* 1.jpg */,
+				2E2DEAB61DE58F770006AA72 /* 2.jpg */,
+				2E2DEAB71DE58F770006AA72 /* 3.jpeg */,
+				2E2DEAB81DE58F770006AA72 /* 4.jpg */,
+				2E2DEAB91DE58F770006AA72 /* 5.jpg */,
+				2E2DEABA1DE58F770006AA72 /* 6.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		3AFB80AEFF6288CEB0E3C574 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55DBE8B65165CE660F240E18 /* Pods-XZPictureCycleScrollView.debug.xcconfig */,
+				ADCD54E6316A52872FDADC13 /* Pods-XZPictureCycleScrollView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7AA9B8769E2C75F96A68772E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93724C3B9A87134A78861311 /* libPods-XZPictureCycleScrollView.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E2DEA851DE583810006AA72 /* XZPictureCycleScrollView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E2DEA9D1DE583810006AA72 /* Build configuration list for PBXNativeTarget "XZPictureCycleScrollView" */;
+			buildPhases = (
+				404E977890A96833E057AA13 /* [CP] Check Pods Manifest.lock */,
+				2E2DEA821DE583810006AA72 /* Sources */,
+				2E2DEA831DE583810006AA72 /* Frameworks */,
+				2E2DEA841DE583810006AA72 /* Resources */,
+				AE1380BCFFD90C03FC3C77F9 /* [CP] Embed Pods Frameworks */,
+				DD72E99493766D4586F57F5E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XZPictureCycleScrollView;
+			productName = XZPictureCycleScrollView;
+			productReference = 2E2DEA861DE583810006AA72 /* XZPictureCycleScrollView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E2DEA7E1DE583810006AA72 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = XZ;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = ZhouZ;
+				TargetAttributes = {
+					2E2DEA851DE583810006AA72 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 2S9EXUX8CH;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 2E2DEA811DE583810006AA72 /* Build configuration list for PBXProject "XZPictureCycleScrollView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E2DEA7D1DE583810006AA72;
+			productRefGroup = 2E2DEA871DE583810006AA72 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E2DEA851DE583810006AA72 /* XZPictureCycleScrollView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E2DEA841DE583810006AA72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E2DEABB1DE58F770006AA72 /* 1.jpg in Resources */,
+				2E2DEAC01DE58F770006AA72 /* 6.jpg in Resources */,
+				2E2DEA991DE583810006AA72 /* LaunchScreen.storyboard in Resources */,
+				2E2DEABC1DE58F770006AA72 /* 2.jpg in Resources */,
+				2E2DEABE1DE58F770006AA72 /* 4.jpg in Resources */,
+				2E2DEABD1DE58F770006AA72 /* 3.jpeg in Resources */,
+				2E2DEABF1DE58F770006AA72 /* 5.jpg in Resources */,
+				2E2DEA961DE583810006AA72 /* Assets.xcassets in Resources */,
+				2E2DEA941DE583810006AA72 /* Main.storyboard in Resources */,
+				2E2DEAC41DE59E5B0006AA72 /* placeImage.png in Resources */,
+				2E2DEAC21DE58FA90006AA72 /* InternetImageUrl.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		404E977890A96833E057AA13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AE1380BCFFD90C03FC3C77F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XZPictureCycleScrollView/Pods-XZPictureCycleScrollView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD72E99493766D4586F57F5E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XZPictureCycleScrollView/Pods-XZPictureCycleScrollView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E2DEA821DE583810006AA72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E2DEAB31DE58BB50006AA72 /* UIView+XZExtension.m in Sources */,
+				2E2DEA8E1DE583810006AA72 /* AppDelegate.m in Sources */,
+				2E2DEAA91DE584380006AA72 /* XZViewController.m in Sources */,
+				2E2DEAB01DE58A740006AA72 /* XZRotationPictureCell.m in Sources */,
+				2E2DEA8B1DE583810006AA72 /* main.m in Sources */,
+				2E2DEAAC1DE586480006AA72 /* XZRotationPictureView.m in Sources */,
+				2E2DEAC71DE966380006AA72 /* StyledPageControl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2E2DEA921DE583810006AA72 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E2DEA931DE583810006AA72 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2E2DEA971DE583810006AA72 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E2DEA981DE583810006AA72 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E2DEA9B1DE583810006AA72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E2DEA9C1DE583810006AA72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E2DEA9E1DE583810006AA72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55DBE8B65165CE660F240E18 /* Pods-XZPictureCycleScrollView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2S9EXUX8CH;
+				INFOPLIST_FILE = XZPictureCycleScrollView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zhouzhou.XZPictureCycleScrollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2E2DEA9F1DE583810006AA72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADCD54E6316A52872FDADC13 /* Pods-XZPictureCycleScrollView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2S9EXUX8CH;
+				INFOPLIST_FILE = XZPictureCycleScrollView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = zhouzhou.XZPictureCycleScrollView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E2DEA811DE583810006AA72 /* Build configuration list for PBXProject "XZPictureCycleScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E2DEA9B1DE583810006AA72 /* Debug */,
+				2E2DEA9C1DE583810006AA72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E2DEA9D1DE583810006AA72 /* Build configuration list for PBXNativeTarget "XZPictureCycleScrollView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E2DEA9E1DE583810006AA72 /* Debug */,
+				2E2DEA9F1DE583810006AA72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E2DEA7E1DE583810006AA72 /* Project object */;
+}
