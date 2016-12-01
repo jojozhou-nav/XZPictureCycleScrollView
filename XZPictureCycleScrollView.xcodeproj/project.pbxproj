@@ -26,6 +26,9 @@
 		2E2DEAC21DE58FA90006AA72 /* InternetImageUrl.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E2DEAC11DE58FA90006AA72 /* InternetImageUrl.plist */; };
 		2E2DEAC41DE59E5B0006AA72 /* placeImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E2DEAC31DE59E5B0006AA72 /* placeImage.png */; };
 		2E2DEAC71DE966380006AA72 /* StyledPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2DEAC61DE966380006AA72 /* StyledPageControl.m */; };
+		2E4A9E6E1DED174500B219E1 /* 7.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2E4A9E6C1DED174500B219E1 /* 7.gif */; };
+		2E4A9E6F1DED174500B219E1 /* 8.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2E4A9E6D1DED174500B219E1 /* 8.gif */; };
+		2E4A9E731DED227100B219E1 /* 9.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2E4A9E721DED227100B219E1 /* 9.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +58,9 @@
 		2E2DEAC31DE59E5B0006AA72 /* placeImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeImage.png; sourceTree = "<group>"; };
 		2E2DEAC51DE966380006AA72 /* StyledPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StyledPageControl.h; sourceTree = "<group>"; };
 		2E2DEAC61DE966380006AA72 /* StyledPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StyledPageControl.m; sourceTree = "<group>"; };
+		2E4A9E6C1DED174500B219E1 /* 7.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 7.gif; sourceTree = "<group>"; };
+		2E4A9E6D1DED174500B219E1 /* 8.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 8.gif; sourceTree = "<group>"; };
+		2E4A9E721DED227100B219E1 /* 9.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 9.gif; sourceTree = "<group>"; };
 		55DBE8B65165CE660F240E18 /* Pods-XZPictureCycleScrollView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZPictureCycleScrollView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XZPictureCycleScrollView/Pods-XZPictureCycleScrollView.debug.xcconfig"; sourceTree = "<group>"; };
 		93724C3B9A87134A78861311 /* libPods-XZPictureCycleScrollView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XZPictureCycleScrollView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADCD54E6316A52872FDADC13 /* Pods-XZPictureCycleScrollView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XZPictureCycleScrollView.release.xcconfig"; path = "Pods/Target Support Files/Pods-XZPictureCycleScrollView/Pods-XZPictureCycleScrollView.release.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +180,9 @@
 				2E2DEAB81DE58F770006AA72 /* 4.jpg */,
 				2E2DEAB91DE58F770006AA72 /* 5.jpg */,
 				2E2DEABA1DE58F770006AA72 /* 6.jpg */,
+				2E4A9E6C1DED174500B219E1 /* 7.gif */,
+				2E4A9E6D1DED174500B219E1 /* 8.gif */,
+				2E4A9E721DED227100B219E1 /* 9.gif */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -258,6 +267,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E4A9E731DED227100B219E1 /* 9.gif in Resources */,
+				2E4A9E6E1DED174500B219E1 /* 7.gif in Resources */,
 				2E2DEABB1DE58F770006AA72 /* 1.jpg in Resources */,
 				2E2DEAC01DE58F770006AA72 /* 6.jpg in Resources */,
 				2E2DEA991DE583810006AA72 /* LaunchScreen.storyboard in Resources */,
@@ -265,6 +276,7 @@
 				2E2DEABE1DE58F770006AA72 /* 4.jpg in Resources */,
 				2E2DEABD1DE58F770006AA72 /* 3.jpeg in Resources */,
 				2E2DEABF1DE58F770006AA72 /* 5.jpg in Resources */,
+				2E4A9E6F1DED174500B219E1 /* 8.gif in Resources */,
 				2E2DEA961DE583810006AA72 /* Assets.xcassets in Resources */,
 				2E2DEA941DE583810006AA72 /* Main.storyboard in Resources */,
 				2E2DEAC41DE59E5B0006AA72 /* placeImage.png in Resources */,

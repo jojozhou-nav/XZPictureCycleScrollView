@@ -13,12 +13,16 @@
 
 #define kCellIdentifier @"XZRotationPictureCell"
 
-@interface XZRotationPictureView ()<UICollectionViewDelegate,UICollectionViewDataSource>
+@interface XZRotationPictureView ()<UICollectionViewDelegate,UICollectionViewDataSource>{
+    CGPoint beginOffset;
+}
+
 @property (nonatomic,weak)UICollectionView *mainView;
 @property (nonatomic, weak) UICollectionViewFlowLayout *layout;
 @property (nonatomic, assign) NSInteger totalCount;
 @property (nonatomic, weak) StyledPageControl *pageControl;
 @property (nonatomic, weak) NSTimer *timer;
+@property (nonatomic, assign) NSInteger realIndexItem;
 @end
 
 @implementation XZRotationPictureView
@@ -26,8 +30,8 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if (self = [super initWithFrame:frame]) {
-        [self creatScrollView];
         [self setDefaultData];
+        [self creatScrollView];
     }
     return self;
 }
@@ -84,21 +88,40 @@
 #pragma mark - UICollectionView代理方法
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.totalCount;
+    return self.unlimitedLoop? self.imageArray.count+1 : self.imageArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    XZRotationPictureCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifier forIndexPath:indexPath];
-    long itemIndex = indexPath.item % self.imageArray.count;
+    NSIndexPath *realIndexPath = indexPath;
+    if (indexPath.row == self.totalCount) { // 在最后一个后面添加第一个cell
+        realIndexPath = [NSIndexPath indexPathForRow:0 inSection:indexPath.section];
+    }
+    NSLog(@"--realIndexPath.item----%ld",(long)realIndexPath.item);
 
+    _realIndexItem = realIndexPath.item;
+    
+    XZRotationPictureCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifier forIndexPath:realIndexPath];
+//    long itemIndex = [self pageIndexWithCurrentCellIndex:indexPath.item];
     if (self.imageStyle == XZRotationPictureViewImageStyleUrl) {
-        cell.imageUrl = self.imageArray[itemIndex];
+        cell.imageUrl = self.imageArray[realIndexPath.item];
     }else{
-        cell.imageName = self.imageArray[itemIndex];
+        cell.imageName = self.imageArray[realIndexPath.item];
     }
     return cell;
 }
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSIndexPath *realIndexPath = indexPath;
+    if (indexPath.row == self.totalCount) { // 在最后一个后面添加第一个cell
+        realIndexPath = [NSIndexPath indexPathForRow:0 inSection:indexPath.section];
+    }
+    if (self.clickItemOperationBlock) {
+        self.clickItemOperationBlock(realIndexPath.item);
+    }
+}
+
 
 #pragma mark - 图片数组
 // 图片数组
@@ -106,7 +129,7 @@
 {
     _imageArray = imageArray;
     
-    _totalCount =  self.unlimitedLoop? imageArray.count*500:imageArray.count;
+    _totalCount =  imageArray.count;
     [self setTimer];
     
     [self setPageControl];
@@ -119,7 +142,6 @@
 {
     return [_pageControl sizeForNumberOfAllPages:self.imageArray.count].width;
 }
-
 
 
 // 设置指示器的位置
@@ -145,15 +167,92 @@
 }
 
 #pragma mark - UIScrollViewDelegate
+// 当前的页数
+- (int)currentPageIndex
+{
+    int index = (_mainView.contentOffset.x + _layout.itemSize.width) / _layout.itemSize.width;
+    return MAX(0, index);
+}
+// 当前的cell对应数组中的第几张图
+- (int)pageIndexWithCurrentCellIndex:(NSInteger)index
+{
+    return (int)index % self.imageArray.count;
+}
+
+
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    int currentIndex = (_mainView.contentOffset.x + _layout.itemSize.width * 0.5) / _layout.itemSize.width;// 当前页数
-    int indexOnPageControl = currentIndex % self.imageArray.count;
-    _pageControl.currentPage = indexOnPageControl;
+//    if (self.scrollDirection == UICollectionViewScrollDirectionHorizontal) {
+        CGFloat offsetX = scrollView.contentOffset.x;
+        
+        //向左滑
+        if (offsetX >= scrollView.contentSize.width - scrollView.bounds.size.width) { // 滚动到最后一页
+            // 重置滚动开始的偏移量
+            beginOffset.x = 0;
+            offsetX = beginOffset.x;
+            // 设置滚动到第一页
+            [scrollView setContentOffset:CGPointMake(beginOffset.x, 0.f) animated:NO];
+            
+        }
+        
+        // 向右滑
+        if (offsetX < 0) {// 滚动到第一页
+            // 重置滚动开始的偏移量
+            beginOffset.x = scrollView.contentSize.width-scrollView.bounds.size.width;
+            offsetX = beginOffset.x;
+            // 设置滚动到最后一页
+            [scrollView setContentOffset:CGPointMake(beginOffset.x, 0.f) animated:NO];
+            
+        }
+        
+        NSInteger tempIndex = offsetX/scrollView.bounds.size.width + 0.5;
+        if (tempIndex >= self.totalCount) {
+            tempIndex = 0;
+        }
+        if (tempIndex != [self currentPageIndex]) {
+            _pageControl.currentPage = tempIndex;
+        }
+//
+//    }
+//    else {
+//        CGFloat offsetY = scrollView.contentOffset.y;
+//        //向上滑
+//        if (offsetY > scrollView.contentSize.height - scrollView.bounds.size.height) { // 滚动到最后一页
+//            beginOffset.y = 0;
+//            offsetY = beginOffset.y;
+//            [scrollView setContentOffset:CGPointMake(0.f, beginOffset.y) animated:NO];
+//            
+//        }
+//        
+//        // 向下滑
+//        if (offsetY < 0) {// 滚动到第一页
+//            beginOffset.y = scrollView.contentSize.height-scrollView.bounds.size.height;
+//            offsetY = beginOffset.y;
+//            [scrollView setContentOffset:CGPointMake(0.f, beginOffset.y) animated:NO];
+//            
+//        }
+//        
+//        NSInteger tempIndex = offsetY/scrollView.bounds.size.height + 0.5;
+//        if (tempIndex >= _pages) {
+//            tempIndex = 0;
+//        }
+//        if (tempIndex != _currentPage) {
+//            self.currentPage = tempIndex;
+//        }
+//        
+//    }
+
+    
+    
+//    int indexOnPageControl = [self pageIndexWithCurrentCellIndex:[self currentPageIndex]];
+//    _pageControl.currentPage = indexOnPageControl;
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
+    beginOffset = scrollView.contentOffset;
+
     [self invalidateTimer];
 }
 
@@ -162,7 +261,21 @@
     [self setTimer];
 }
 
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self scrollViewDidEndScrollingAnimation:self.mainView];
+}
 
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    
+//    int itemIndex = (_mainView.contentOffset.x + _layout.itemSize.width * 0.5) / _layout.itemSize.width;
+//    int indexOnPageControl = itemIndex%self.imageArray.count;
+    
+    if (self.itemDidScrollOperationBlock) {
+        self.itemDidScrollOperationBlock(_realIndexItem);
+    }
+}
 #pragma mark - 时间参数
 
 - (void)setAutoScrollTimeInterval:(CGFloat)autoScrollTimeInterval
@@ -189,21 +302,24 @@
 // 自动滚动
 - (void)autoScrollImage
 {
-    int currentIndex = (_mainView.contentOffset.x + _layout.itemSize.width * 0.5) / _layout.itemSize.width;// 当前页数
-    int targetIndex = currentIndex + 1;// 目标页数
-    if (targetIndex == _totalCount) {
-        if (self.unlimitedLoop) {// 如果需要无线轮播，进行下面的方法
-            targetIndex = _totalCount * 0.5;
-            [self.mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
-        }
-        return;
-    }
-     [self.mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
-
-    // 控制选中的pageControl
-    int indexOnPageControl = currentIndex % self.imageArray.count;
-    _pageControl.currentPage = indexOnPageControl;
-
+    
+    [self.mainView setContentOffset:CGPointMake(self.mainView.contentOffset.x + self.mainView.bounds.size.width, 0.f) animated:YES];
+    
+//    int currentIndex = [self currentPageIndex];// 当前页数
+//    int targetIndex = currentIndex + 1;// 目标页数
+//    if (targetIndex == _totalCount) {
+//        if (self.unlimitedLoop) {// 如果需要无线轮播，进行下面的方法
+////            targetIndex = _totalCount * 0.5;
+//            targetIndex = 0;
+//            [self.mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
+//        }
+//        return;
+//    }
+//    [self.mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:targetIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
+//    
+//    // 控制选中的pageControl
+//    _pageControl.currentPage = [self pageIndexWithCurrentCellIndex:currentIndex];
+    
 }
 
 // 是否循环滚动
@@ -220,7 +336,7 @@
     
     _mainView.frame = self.bounds;
     if (_mainView.contentOffset.x == 0) {
-        [_mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:_totalCount * 0.5 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
+        [_mainView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
     }
     
 }

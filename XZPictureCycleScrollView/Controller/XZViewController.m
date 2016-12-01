@@ -28,7 +28,7 @@
     
     
     
-//    XZRotationPictureView *rotationView2 = [[XZRotationPictureView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(rotationView1.frame)+50, self.view.xz_width, 250)];
+//    XZRotationPictureView *rotationView2 = [[XZRotationPictureView alloc] initWithFrame:CGRectMake(0, 10, self.view.xz_width, 250)];
 //    rotationView2.imageStyle = XZRotationPictureViewImageStyleUrl;
 //    // 加载url资源
 //    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"InternetImageUrl" ofType:@"plist"];
